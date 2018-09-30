@@ -1,13 +1,8 @@
+var str = '{"a":1, "b":2, "foo":"bar"}'; // string version of a JS Object
+var obj = JSON.parse(str);
 
+console.log(obj);     // an Object that has been deserialized
 
-const name = "Peter";
+delete obj.foo;       // modify the object
+JSON.stringify(obj);  // serialize it back to a string
 
-const person = {
-  name,
-  age : 36,
-  country : "Korea"
-}
-
-const person1 = {...person}
-
-console.log({person1});
